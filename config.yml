@@ -1,0 +1,426 @@
+file_naming_conventions:
+
+  rdacs:
+    - ABOM
+    - CMC
+    - DMI
+    - EUR IFR
+    - JPL
+    - METNO
+    - MYO CMEMS
+    - NAVO
+    - NCEI
+    - OSPO
+    - OSISAF
+    - REMSS
+    - RSMAS
+    - STAR
+    - UKMO
+    - ESACCI
+    - JAXA
+    - MAR
+    - NCDC
+
+  processing_levels:
+    - L2P
+    - L3U
+    - L3C
+    - L3S
+    - L4
+
+  sst_types:
+    - SSTint
+    - SSTskin
+    - SSTsubskin
+    - SSTdepth
+    - SSTfnd
+    - SSTblend
+
+  file_types:
+    - nc
+    - xml
+
+global_attributes:
+
+  - Conventions: 
+      types: 
+        - str
+      mandatory: True
+  - title: 
+      types: 
+        - str
+      mandatory: True
+  - summary: 
+      types: 
+        - str
+      mandatory: True
+  - references: 
+      types: 
+        - str
+      mandatory: True
+  - institution: 
+      types: 
+        - str
+      mandatory: True
+  - history: 
+      types: 
+        - str
+      mandatory: True
+  - comment: 
+      types: 
+        - str
+      mandatory: True 
+  - license: 
+      types: 
+        - str
+      mandatory: True
+  - id: 
+      types: 
+        - str
+      mandatory: True
+  - naming_authority: 
+      types: 
+        - str
+      mandatory: True
+  - product_version: 
+      types: 
+        - str
+      mandatory: True
+  - uuid: 
+      types: 
+        - str
+      mandatory: True
+  - gds_version_id: 
+      types: 
+        - str
+      mandatory: True
+  - netcdf_version_id: 
+      types: 
+        - str
+      mandatory: True
+  - date_created: 
+      types: 
+        - str
+      mandatory: True
+  - file_quality_level: 
+      types: 
+        - int32
+      mandatory: True
+  - spatial_resolution: 
+      types: 
+        - str
+      mandatory: True
+  - time_coverage_start: 
+      types: 
+        - str
+      mandatory: True
+  - time_coverage_end: 
+      types: 
+        - str
+      mandatory: True
+  - source: 
+      types: 
+        - str
+      mandatory: True
+  - platform: 
+      types: 
+        - str
+      mandatory: True
+  - platform_vocabulary: 
+      types: 
+        - str
+      mandatory: True
+  - instrument: 
+      types: 
+        - str
+      mandatory: True
+  - instrument_vocabulary: 
+      types: 
+        - str
+      mandatory: True
+  - metadata_link: 
+      types: 
+        - str
+      mandatory: True
+  - keywords: 
+      types: 
+        - str
+      mandatory: True
+  - keywords_vocabulary: 
+      types: 
+        - str
+      mandatory: True
+  - standard_name_vocabulary: 
+      types: 
+        - str
+      mandatory: True
+  - geospatial_lat_min: 
+      types: 
+        - float64
+      mandatory: True
+  - geospatial_lat_max: 
+      types: 
+        - float64
+      mandatory: True
+  - geospatial_lat_units: 
+      types: 
+        - str
+      mandatory: True
+  - geospatial_lat_resolution: 
+      types: 
+        - float32
+      mandatory: True
+  - geospatial_lon_min: 
+      types: 
+        - float64
+      mandatory: True
+  - geospatial_lon_max: 
+      types: 
+        - float64
+      mandatory: True
+  - geospatial_lon_units: 
+      types: 
+        - str
+      mandatory: True
+  - geospatial_lon_resolution: 
+      types: 
+        - float32
+      mandatory: True
+  - geospatial_bounds: 
+      types: 
+        - str
+      mandatory: True
+  - acknowledgment: 
+      types: 
+        - str
+      mandatory: True
+  - creator_name: 
+      types: 
+        - str
+      mandatory: True
+  - creator_url: 
+      types: 
+        - str
+      mandatory: True
+  - creator_email: 
+      types: 
+        - str
+      mandatory: True
+  - project: 
+      types: 
+        - str
+      mandatory: True
+  - publisher_url: 
+      types: 
+        - str
+      mandatory: True
+  - publisher_email: 
+      types: 
+        - str
+      mandatory: True
+  - processing_level: 
+      types: 
+        - str
+      mandatory: True
+  - cdm_data_types: 
+      types: 
+        - str
+      mandatory: True
+
+variables:
+
+  - sea_surface_temperature: 
+      types:
+        - float64
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - units: 
+            types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+  - sses_bias: 
+      types:
+        - float64
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - units: 
+            types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+  - sses_standard_deviation: 
+      types:
+        - float64
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - units: 
+            types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+  - l2p_flags: 
+      types:
+        - int16
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+  - quality_level: 
+      types:
+        - float32
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+  - dt_analysis: 
+      types:
+        - float64
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - units: 
+            types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+  - wind_speed: 
+      types:
+        - float64
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - units: 
+            types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - m s-1
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+  - sea_ice_fraction: 
+      types:
+        - float64
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - units: 
+            types: 
+                - str
+            mandatory: False
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+  - aerosol_dynamic_indicator: 
+      types:
+        - float64
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - units: 
+            types: 
+                - str
+            mandatory: False
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+  - sst_dtime: 
+      types: 
+        - timedelta64[ns]
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - units: 
+            types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - seconds
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+  - wind_speed_dtime_from_sst:
+      types:
+        - float64
+      mandatory: True
+      attributes: 
+        - long_name:
+            types: 
+                - str
+            mandatory: False
+        - units: 
+            types: 
+                - str
+            mandatory: False
+        - comment: 
+            types: 
+                - str
+            mandatory: False
+
+longitude:
+    valid_min: -180
+    valid_max: 180
