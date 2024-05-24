@@ -1,0 +1,93 @@
+# GDS version 2.1
+
+variables:
+
+  - sea_surface_temperature: 
+      allowed_types:
+        - int16
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - sses_bias: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - sses_standard_deviation: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - quality_level: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - sst_dtime: 
+      allowed_types: 
+        - int16
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - seconds
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False

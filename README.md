@@ -15,7 +15,6 @@ This work was funded by the European Union's Copernicus programme as part of the
 ``GDS checker`` requires:
 
 - [Python](https://www.python.org/)
-- [Conda](https://conda.io/projects/conda/en/latest/index.html)
 - [Git](https://git-scm.com/)
 
 ## Installation
@@ -25,8 +24,7 @@ This work was funded by the European Union's Copernicus programme as part of the
 ```bash
 git clone https://github.com/GHRSST/GDS-checker.git
 cd GDS-checker
-conda env create -n gds_checker_env --file env.yml
-conda activate gds_checker_env
+pip install .
 ```
 
 ## Usage
@@ -34,5 +32,5 @@ conda activate gds_checker_env
 ``GDS checker`` can be used with:
 
 ```bash
-python gds_checker.py <netcdf_file_path> config.yml
+gds_checker <netcdf_file_path>
 ```

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gds_checker"
+version = "0.1.0"
+dependencies = [
+  "netcdf4",
+  "pyyaml",
+  "xarray",
+]
+authors = [
+  {name = "Nathan Lalloué", email = "Nathan.lalloue@noveltis.fr"},
+]
+maintainers = [
+  {name = "Nathan Lalloué", email = "Nathan.lalloue@noveltis.fr"},
+]
+description = "Python software aiming to check that GHRSST products have a standard format, specified by the GHRSST Data Specification"
+readme = "README.md"
+keywords = ["GDS", "checker", "yaml", "netCDF", "xarray"]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/GHRSST/GDS-checker"
+
+[project.scripts]
+gds_checker = "gds_checker.gds_checker:main"
+
+[tool.setuptools.package-data]
+"gds_checker" = ["*.yml"]
