@@ -1,0 +1,74 @@
+# GDS version 2.1
+
+variables:
+
+  - analysed_sst: 
+      allowed_types:
+        - int16
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - analysis_error: 
+      allowed_types:
+        - int16
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - sea_ice_fraction: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - '1'
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - mask: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False

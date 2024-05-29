@@ -1,0 +1,195 @@
+# GDS version 2.1
+
+variables:
+
+  - sea_surface_temperature: 
+      allowed_types:
+        - int16
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - sses_bias: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - sses_standard_deviation: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - l2p_flags: 
+      allowed_types:
+        - int16
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - quality_level: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - dt_analysis: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - wind_speed: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - m s-1
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - sea_ice_fraction: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - aerosol_dynamic_indicator: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - sst_dtime: 
+      allowed_types: 
+        - int16
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - seconds
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+  - wind_speed_dtime_from_sst:
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False

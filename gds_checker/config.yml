@@ -1,0 +1,258 @@
+# GDS version 2.1
+
+file_naming_conventions:
+
+  rdacs:
+    - ABOM
+    - CMC
+    - DMI
+    - EUR IFR
+    - JPL
+    - METNO
+    - MYO CMEMS
+    - NAVO
+    - NCEI
+    - OSPO
+    - OSISAF
+    - REMSS
+    - RSMAS
+    - STAR
+    - UKMO
+    - ESACCI
+    - JAXA
+    - MAR
+    - NCDC
+
+  processing_levels:
+    - L2P
+    - L3U
+    - L3C
+    - L3S
+    - L4
+
+  sst_types:
+    - SSTint
+    - SSTskin
+    - SSTsubskin
+    - SSTdepth
+    - SSTfnd
+    - SSTblend
+
+  file_types:
+    - nc
+    - xml
+
+global_attributes:
+
+  - Conventions: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - title: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - summary: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - references: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - institution: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - history: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - comment: 
+      allowed_types: 
+        - str
+      mandatory: True 
+  - license: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - id: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - naming_authority: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - product_version: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - uuid: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - gds_version_id: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - netcdf_version_id: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - date_created: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - file_quality_level: 
+      allowed_types: 
+        - int32
+      mandatory: True
+  - spatial_resolution: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - time_coverage_start: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - time_coverage_end: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - source: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - platform: 
+      allowed_types: 
+        - str
+      mandatory: True
+      allowed_values: 
+        - METOP_C
+        - Suomi NPP
+        - NOAA-18, NOAA-19, MetOpB, NPP, GCOM-W, GOES13, MSG4, DMSP-F17, DMSP-F15
+        - Sentinel3A
+  - platform_vocabulary: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - instrument: 
+      allowed_types: 
+        - str
+      mandatory: True
+      allowed_values: 
+        - VIIRS
+  - instrument_vocabulary: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - metadata_link: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - keywords: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - keywords_vocabulary: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - standard_name_vocabulary: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - geospatial_lat_min: 
+      allowed_types: 
+        - float64
+      mandatory: True
+  - geospatial_lat_max: 
+      allowed_types: 
+        - float64
+      mandatory: True
+  - geospatial_lat_units: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - geospatial_lat_resolution: 
+      allowed_types: 
+        - float32
+      mandatory: True
+  - geospatial_lon_min: 
+      allowed_types: 
+        - float64
+      mandatory: True
+  - geospatial_lon_max: 
+      allowed_types: 
+        - float64
+      mandatory: True
+  - geospatial_lon_units: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - geospatial_lon_resolution: 
+      allowed_types: 
+        - float32
+      mandatory: True
+  - geospatial_bounds: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - acknowledgment: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - creator_name: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - creator_url: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - creator_email: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - project: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - publisher_url: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - publisher_email: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - processing_level: 
+      allowed_types: 
+        - str
+      mandatory: True
+  - cdm_data_type: 
+      allowed_types: 
+        - str
+      mandatory: True
+      allowed_values: 
+        - swath
+        - grid
+  - start_time:
+      deprecated: True
+  - stop_time:
+      deprecated: True
+  - northernmost_latitude:
+      deprecated: True
+  - southernmost_latitude:
+      deprecated: True
+  - easternmost_longitude:
+      deprecated: True
+  - westernmost_longitude:
+      deprecated: True
+  - sensor:
+      deprecated: True
+
+longitude:
+    valid_min: -180
+    valid_max: 180
