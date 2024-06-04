@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="gds_checker",
-    version="24.05.2024",
+    version="0.1.0",
     description=("Python software aiming to check that GHRSST products have a"
                  "standard format, specified by the GHRSST Data "
                  "Specification"),

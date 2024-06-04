@@ -10,6 +10,8 @@ import yaml
 import xarray as xr
 import numpy as np
 
+PROGRAM_VERSION = "0.1.0"
+
 logger = logging.getLogger()
 handler = logging.StreamHandler()
 formatter = logging.Formatter('%(levelname)-10s %(message)s')
@@ -332,6 +334,7 @@ def main():
     """
     parser = argparse.ArgumentParser(usage='%(prog)s <netcdf_file_path>',
                                      epilog="Example: %(prog)s test.nc")
+    parser.add_argument('-v', '--version', action='version', version=f'%(prog)s v{PROGRAM_VERSION}')
     _, unknown = parser.parse_known_args()
     if len(unknown) != 1:
         parser.error("Usage: gds_checker <netcdf_file_path>")
