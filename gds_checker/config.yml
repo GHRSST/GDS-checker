@@ -129,344 +129,35 @@ global_attributes:
         - str
       mandatory: True
       allowed_values: 
-        - Aeolus-2
-        - AISSat-2
-        - Aist-2T N1
-        - Aist-2T N2
-        - ALOS-2
-        - ALOS-4
-        - ALTIUS
-        - AMAZONIA-1
-        - AOS-PMM
-        - AOS-Sky
-        - AOS-Storm
         - Aqua
-        - Arctica-M N1
-        - Arctica-M N2
-        - Aura
-        - AWS
-        - Biomass
-        - CALIPSO
-        - CARBONITE-2
-        - CARTOSAT-2A
-        - CARTOSAT-2B
-        - CARTOSAT-2C
-        - CARTOSAT-2E
-        - CARTOSAT-3
-        - CAS500-1
-        - CAS500-2
-        - CAS500-4
-        - CAS500-5
-        - CBERS-4
-        - CBERS-4A
-        - CFOSAT
-        - CLARREO Pathfinder-on-ISS
-        - CO2Image
-        - CO3D
-        - COSMIC-2 FM1
-        - COSMIC-2 FM2
-        - COSMIC-2 FM3
-        - COSMIC-2 FM4
-        - COSMIC-2 FM5
-        - COSMIC-2 FM6
-        - COSMO-SkyMed 1
-        - COSMO-SkyMed 2
-        - COSMO-SkyMed 4
-        - CryoSat-2
-        - CSES
-        - CSG-1
-        - CSG-2
-        - CSG-3
-        - CSG-4
-        - CYGNSS
-        - DESIS-on-ISS
-        - Diademe 1&2
-        - DMC3
-        - DMSP F-16
-        - DMSP F-17
-        - DMSP F-18
-        - DoT-1
-        - DSCOVR
-        - DubaiSat-2
-        - EarthCARE
-        - ECOSTRESS-on-ISS
-        - Elektro-L N2
-        - Elektro-L N3
-        - Elektro-L N4
-        - Elektro-L N5
-        - EMIT-on-ISS
-        - EnMAP
-        - ePOP on CASSIOPE
-        - FLEX
-        - FORUM
-        - FY-2G
-        - FY-2H
-        - FY-3C
-        - FY-3D
-        - FY-3E
-        - FY-3F
-        - FY-3H
-        - FY-3I
-        - FY-3RM-1
-        - FY-3RM-2
-        - FY-4A
-        - FY-4B
-        - FY-4C
-        - FY-4D
-        - FY-4E
-        - FY-4F
-        - FY-4G
-        - GCOM-C
-        - GCOM-W
-        - GEDI-on-ISS
-        - GEO-KOMPSAT-2A
-        - GEO-KOMPSAT-2B
-        - GeoXO1
-        - GeoXO2
-        - GF-1
-        - GF-2
-        - GF-3
-        - GF-4
-        - GLIMR
-        - GOES-14
-        - GOES-15
-        - GOES-16
-        - GOES-17
-        - GOES-18
-        - GOES-U
-        - GOSAT
-        - GOSAT-2
-        - GOSAT-GW
-        - Goumang
-        - GPM Core
-        - GRACE-FO
-        - Harmony
-        - HAWCSat
-        - Himawari-10
-        - Himawari-8
-        - Himawari-9
-        - HJ-2A
-        - HJ-2B
-        - HRWS SAR
-        - HY-1C
-        - HY-1D
-        - HY-1E
-        - HY-1F
-        - HY-2A
-        - HY-2B
-        - HY-2C
-        - HY-2D
-        - HY-2E
-        - HY-2F
-        - HY-2G
-        - HY-2H
-        - HY-3A
-        - HY-3B
-        - HY-3C
-        - HY-3D
-        - HydroGNSS
-        - ICESat-2
-        - INCUS
-        - INSAT-3D
-        - INSAT-3DR
-        - INSAT-3DS
-        - Ionosphera-M N1
-        - Ionosphera-M N2
-        - Ionosphera-M N3
-        - Ionosphera-M N4
-        - Jason-3
-        - JPSS-1
-        - JPSS-2
-        - JPSS-3
-        - JPSS-4
-        - Kanopus-V N3
-        - Kanopus-V N4
-        - Kanopus-V N5
-        - Kanopus-V N6
-        - Kanopus-V-IR N2
-        - KhalifaSat
-        - KOMPSAT-2
-        - KOMPSAT-3
-        - KOMPSAT-3A
-        - KOMPSAT-5
-        - KOMPSAT-6
-        - KOMPSAT-7
-        - KOMPSAT-7A
-        - Kondor-FKA N1
-        - Kondor-FKA N2
-        - LAGEOS-1
-        - LAGEOS-2
-        - Landsat 7
-        - Landsat 8
-        - Landsat 9
-        - Landsat Next
-        - LARES
-        - LARES-2
-        - LIS-on-ISS
-        - LLITED
-        - LOTUSat 1
-        - MAGIC/MCDO
-        - MAGIC/NGGM
-        - MAIA
-        - MDASat-1a
-        - MDASat-1b
-        - MDASat-1c
-        - MERLIN
-        - Meteor-M N2-2
-        - Meteor-M N2-3
-        - Meteor-M N2-4
-        - Meteor-M N2-5
-        - Meteor-M N2-6
-        - Meteor-MP N1
-        - Meteor-MP N2
-        - Meteor-MP N3
-        - Meteosat-10
-        - Meteosat-11
-        - Meteosat-9
-        - Metop-B
-        - Metop-C
-        - METOP-SG A1
-        - METOP-SG A2
-        - METOP-SG A3
-        - METOP-SG B1
-        - METOP-SG B2
-        - METOP-SG B3
-        - MeznSat
-        - MicroCarb
-        - MOLI-on-ISS
-        - MTG-I1 (imaging)
-        - MTG-I2 (imaging)
-        - MTG-I3 (imaging)
-        - MTG-I4 (imaging)
-        - MTG-S1 (sounding)
-        - MTG-S2 (sounding)
-        - NACHOS
-        - NigeriaSat-2
-        - NigeriaSat-X
-        - NISAR
+        - Envisat
+        - ERS-1
+        - ERS-2
+        - NOAA-7
+        - NOAA-9
+        - NOAA-10
+        - NOAA-11
+        - NOAA-12
+        - NOAA-14
+        - NOAA-15
+        - NOAA-16
+        - NOAA-17
         - NOAA-18
         - NOAA-19
-        - NORSAT-1
-        - NORSAT-2
-        - NORSAT-3
-        - NORSAT-4
-        - NORSAT-TD
-        - NovaSAR-1
-        - Obzor-R N1
-        - OCEANSAT-3
-        - OCEANSAT-3A
-        - OCO-2
-        - OCO-3-on-ISS
-        - Odin
-        - PACE
-        - PAZ
-        - Pleiades 1A
-        - Pleiades 1B
-        - PolSIR
-        - PREFIRE
-        - PRISMA
-        - PRISMA2GEN
-        - RADARSAT-2
-        - RCM-1
-        - RCM-2
-        - RCM-3
-        - RESOURCESAT-2
-        - RESOURCESAT-2A
-        - RESOURCESAT-3
-        - RESOURCESAT-3A
-        - RESOURCESAT-3S
-        - RESOURCESAT-3SA
-        - Resurs-P N4
-        - Resurs-P N5
-        - Resurs-PM N1
-        - Resurs-PM N2
-        - RISAT-1A
-        - RISAT-1B
-        - SABIA_MAR-A
-        - SABIA_MAR-B
-        - SAGE-III-on-ISS
-        - SAOCOM 1A
-        - SAOCOM 1B
-        - SAOCOM-2
-        - SARAL
-        - SARE-2A (S1)
-        - SARE-2A (S2)
-        - SARE-2A (S3)
-        - SARE-2A (S4)
-        - SBG-TIR
-        - SBG-VSWIR
-        - SCD-1
-        - SCD-2
-        - SCISAT-1
-        - Sentinel CHIME-A
-        - Sentinel CHIME-B
-        - Sentinel CIMR-A
-        - Sentinel CIMR-B
-        - Sentinel CO2M-A
-        - Sentinel CO2M-B
-        - Sentinel CO2M-C
-        - Sentinel CRISTAL-A
-        - Sentinel CRISTAL-B
-        - Sentinel LSTM-A
-        - Sentinel LSTM-B
-        - Sentinel ROSE-L A
-        - Sentinel ROSE-L B
-        - Sentinel-1 A
-        - Sentinel-1 C
-        - Sentinel-1 D
-        - Sentinel-2 A
-        - Sentinel-2 B
-        - Sentinel-2 C
-        - Sentinel-2 D
-        - Sentinel-3 A
-        - Sentinel-3 B
-        - Sentinel-3 C
-        - Sentinel-3 D
-        - Sentinel-4 A
-        - Sentinel-4 B
-        - Sentinel-5 A
-        - Sentinel-5 B
-        - Sentinel-5 C
-        - Sentinel-5 precursor
-        - Sentinel-6 A Michael Freilich
-        - Sentinel-6 B
-        - Sich 2-30
-        - SMAP
-        - SMOS
-        - Space Weather L1-A
-        - Space Weather L1-B
-        - SSTL S1-4
-        - STARLETTE
-        - STELLA
-        - STSAT-3
-        - Suomi NPP
-        - Swarm
-        - SWFO-L1
-        - SWOT
-        - TanDEM-L
-        - TanDEM-X
-        - TEMPO
+        - MetOpA
+        - GOES11
+        - GOES12
+        - GOES13
         - Terra
-        - TerraSAR-X
-        - THEOS
-        - THEOS-2 Main VHR Satellite
-        - THEOS-2 Small Satellite
-        - TRISHNA
-        - TROPICS
-        - TROPICS Pathfinder
-        - TRUTHS
-        - TSIS-1-on-ISS
-        - TSIS-2
-        - VENµS
-        - VNREDSat-1
-        - WildFireSat
-        - Yunhai-1 03
-        - ZACube-2
-        - ZY-1-02D
-        - ZY-1-02E
-        - ZY-3-01
-        - ZY-3-02
-        - ZY-3-03
+        - MTSAT1R
+        - NOAA16
+        - NOAA17
+        - NOAA18
+        - MSG1
+        - MSG2
+        - TRMM
+        - Sentinel3A
+        - Sentinel3B
   - platform_vocabulary: 
       allowed_types: 
         - str
@@ -476,7 +167,19 @@ global_attributes:
         - str
       mandatory: True
       allowed_values: 
-        - VIIRS
+        - AMSRE
+        - AATSR
+        - ATSR
+        - AVHRR_GAC
+        - AVHRR_LAC
+        - AVHRR
+        - GOES_Imager
+        - MODIS
+        - JAMI
+        - AVHRR_HRPT
+        - SEVIRI
+        - TMI
+        - SLSTR
   - instrument_vocabulary: 
       allowed_types: 
         - str
