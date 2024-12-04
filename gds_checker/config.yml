@@ -105,6 +105,7 @@ global_attributes:
       allowed_types: 
         - str
       mandatory: True
+
   - date_modified: 
       allowed_types: 
         - str
@@ -117,6 +118,7 @@ global_attributes:
       allowed_types: 
         - str
       mandatory: False
+
   - file_quality_level: 
       allowed_types: 
         - int32
@@ -127,11 +129,11 @@ global_attributes:
       mandatory: True
   - time_coverage_start: 
       allowed_types: 
-        - str
+        - date
       mandatory: True
   - time_coverage_end: 
       allowed_types: 
-        - str
+        - date
       mandatory: True
   - source: 
       allowed_types: 
@@ -146,6 +148,37 @@ global_attributes:
         - Envisat
         - ERS-1
         - ERS-2
+        - GCOM-W
+        - GOES-14
+        - GOES-15
+        - GOES-16
+        - GOES-17
+        - GOES-18
+        - GOES-U
+        - GPM Core
+        - Himawari-10
+        - Himawari-8
+        - Himawari-9
+        - Landsat 7
+        - Landsat 8
+        - Landsat 9
+        - Meteosat-10
+        - Meteosat-11
+        - Meteosat-9
+        - Metop-A
+        - Metop-B
+        - Metop-C
+        - METOP-SG A1
+        - METOP-SG A2
+        - METOP-SG A3
+        - METOP-SG B1
+        - METOP-SG B2
+        - METOP-SG B3
+        - MTG-I1 (imaging)
+        - MTG-I2 (imaging)
+        - MTG-I3 (imaging)
+        - MTG-I4 (imaging)
+
         - NOAA-7
         - NOAA-9
         - NOAA-10
@@ -157,21 +190,18 @@ global_attributes:
         - NOAA-17
         - NOAA-18
         - NOAA-19
-        - MetOpA
+
         - Suomi NPP
-        - GOES11
-        - GOES12
-        - GOES13
+
         - Terra
         - MTSAT1R
-        - NOAA16
-        - NOAA17
-        - NOAA18
-        - MSG1
-        - MSG2
+
         - TRMM
-        - "Sentinel-3 A"
-        - "Sentinel-3 B"
+        - Sentinel-3 A
+        - Sentinel-3 B
+        - Sentinel-3 C
+        - Sentinel-3 D
+
   - platform_vocabulary: 
       allowed_types: 
         - str
@@ -202,6 +232,7 @@ global_attributes:
       mandatory: True
       allowed_values:
         - CEOS instrument table
+
   - metadata_link: 
       allowed_types: 
         - str
@@ -266,6 +297,7 @@ global_attributes:
       allowed_types: 
         - str
       mandatory: True
+
   - geospatial_bounds_crs:
       allowed_types: 
         - str
@@ -303,6 +335,7 @@ global_attributes:
       allowed_values:
         - up
         - down
+
   - acknowledgment: 
       allowed_types: 
         - str
@@ -313,7 +346,7 @@ global_attributes:
       mandatory: True
   - creator_url: 
       allowed_types: 
-        - str
+        - url
       mandatory: True
   - creator_email: 
       allowed_types: 
@@ -340,10 +373,12 @@ global_attributes:
       allowed_types: 
         - str
       mandatory: False
+
   - project: 
       allowed_types: 
         - str
       mandatory: True
+
   - program: 
       allowed_types: 
         - str
@@ -354,12 +389,13 @@ global_attributes:
       mandatory: True
   - publisher_url: 
       allowed_types: 
-        - str
+        - url
       mandatory: True
   - publisher_email: 
       allowed_types: 
         - str
       mandatory: True
+
   - publisher_type: 
       allowed_types: 
         - str
@@ -373,6 +409,7 @@ global_attributes:
       allowed_types: 
         - str
       mandatory: False
+
   - processing_level: 
       allowed_types: 
         - str
@@ -384,6 +421,7 @@ global_attributes:
         - L3S
         - L4
         - GMPE
+
   - cdm_data_type: 
       allowed_types: 
         - str
@@ -409,3 +447,4 @@ global_attributes:
 longitude:
     valid_min: -180
     valid_max: 180
+

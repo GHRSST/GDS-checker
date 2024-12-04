@@ -34,6 +34,7 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
         - depth: 
             allowed_types: 
                 - str
@@ -73,7 +74,6 @@ variables:
                 - float32
                 - float64
             mandatory: True
-
 
 
   - sses_bias: 
@@ -133,6 +133,7 @@ variables:
                 - "lon lat"
                 - "lat lon"
 
+
   - sses_standard_deviation: 
       allowed_types:
         - int8
@@ -152,6 +153,7 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
         - _FillValue: 
             allowed_types: 
                 - int8
@@ -190,6 +192,7 @@ variables:
                 - "lon lat"
                 - "lat lon"
 
+
   - l2p_flags: 
       allowed_types:
         - int16
@@ -203,8 +206,6 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
-
-
 
   - quality_level: 
       allowed_types:
@@ -327,3 +328,4 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
