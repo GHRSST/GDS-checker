@@ -24,6 +24,8 @@ This work was funded by the European Union's Copernicus programme as part of the
 ```bash
 git clone https://github.com/GHRSST/GDS-checker.git
 cd GDS-checker
+python -m venv env_GDS_checker # create a virtual environment
+source env_GDS_checker/bin/activate # activate the virtual environment
 pip install .
 ```
 
