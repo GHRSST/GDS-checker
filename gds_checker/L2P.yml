@@ -10,17 +10,72 @@ variables:
         - long_name:
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
+        - standard_name:
+            allowed_types: 
+                - str
+            mandatory: True
+            allowed_values: 
+                - sea_surface_subskin_temperature
+                - sea_surface_skin_temperature
         - units: 
+            allowed_types: 
+                - str
+            mandatory: True
+            allowed_values: 
+                - K
+        - coverage_content_type:
             allowed_types: 
                 - str
             mandatory: False
             allowed_values: 
-                - kelvin
+                - physicalMeasurement
         - comment: 
             allowed_types: 
                 - str
             mandatory: False
+        - depth: 
+            allowed_types: 
+                - str
+            mandatory: False
+        - source: 
+            allowed_types: 
+                - str
+            mandatory: False
+        - coordinates: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - "lon lat"
+                - "lat lon"
+        - _FillValue: 
+            allowed_types: 
+                - int16
+            mandatory: True
+            allowed_values: 
+                - -32768
+        - valid_min: 
+            allowed_types: 
+                - int16
+            mandatory: False
+        - valid_max: 
+            allowed_types: 
+                - int16
+            mandatory: False
+        - add_offset: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - scale_factor: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+
+
+
   - sses_bias: 
       allowed_types:
         - int8
@@ -29,17 +84,55 @@ variables:
         - long_name:
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
-                - kelvin
+                - K
         - comment: 
             allowed_types: 
                 - str
             mandatory: False
+        - _FillValue: 
+            allowed_types: 
+                - int8
+            mandatory: True
+            allowed_values: 
+                - -128
+        - valid_min: 
+            allowed_types: 
+                - int8
+            mandatory: False
+        - valid_max: 
+            allowed_types: 
+                - int8
+            mandatory: False
+        - add_offset: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - scale_factor: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - coverage_content_type:
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - qualityInformation
+        - coordinates: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - "lon lat"
+                - "lat lon"
+
   - sses_standard_deviation: 
       allowed_types:
         - int8
@@ -54,11 +147,49 @@ variables:
                 - str
             mandatory: False
             allowed_values: 
-                - kelvin
+                - K
         - comment: 
             allowed_types: 
                 - str
             mandatory: False
+        - _FillValue: 
+            allowed_types: 
+                - int8
+            mandatory: True
+            allowed_values: 
+                - -128
+        - valid_min: 
+            allowed_types: 
+                - int8
+            mandatory: False
+        - valid_max: 
+            allowed_types: 
+                - int8
+            mandatory: False
+        - add_offset: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - scale_factor: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - coverage_content_type:
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - qualityInformation
+        - coordinates: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - "lon lat"
+                - "lat lon"
+
   - l2p_flags: 
       allowed_types:
         - int16
@@ -72,6 +203,9 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
+
+
   - quality_level: 
       allowed_types:
         - int8
