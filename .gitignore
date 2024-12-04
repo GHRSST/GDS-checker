@@ -3,3 +3,4 @@
 gds_checker/__pycache__/
 gds_checker.egg-info/
 build/
+env_GDS_checker/

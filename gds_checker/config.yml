@@ -246,7 +246,7 @@ global_attributes:
       mandatory: True
   - creator_url: 
       allowed_types: 
-        - str
+        - url
       mandatory: True
   - creator_email: 
       allowed_types: 
@@ -258,7 +258,7 @@ global_attributes:
       mandatory: True
   - publisher_url: 
       allowed_types: 
-        - str
+        - url
       mandatory: True
   - publisher_email: 
       allowed_types: 
