@@ -103,20 +103,20 @@ global_attributes:
       mandatory: True
   - date_created: 
       allowed_types: 
-        - str
+        - date
       mandatory: True
 
   - date_modified: 
       allowed_types: 
-        - str
+        - date
       mandatory: False
   - date_issued: 
       allowed_types: 
-        - str
+        - date
       mandatory: False
   - date_metadata_modified: 
       allowed_types: 
-        - str
+        - date
       mandatory: False
 
   - file_quality_level: 

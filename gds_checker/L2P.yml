@@ -206,6 +206,14 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+        - flag_meanings: 
+            allowed_types: 
+                - str
+            mandatory: True
+        - flag_masks: 
+            allowed_types: 
+                - int16
+            mandatory: True
 
   - quality_level: 
       allowed_types:
@@ -266,25 +274,128 @@ variables:
         - long_name:
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
+        - standard_name:
+            allowed_types: 
+                - str
+            mandatory: True
+            allowed_values: 
+                - sea_ice_area_fraction
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
+            allowed_values:
+                - "1"
         - comment: 
             allowed_types: 
                 - str
             mandatory: False
+        - _FillValue: 
+            allowed_types: 
+                - int8
+            mandatory: True
+            allowed_values: 
+                - -128
+        - valid_min: 
+            allowed_types: 
+                - int8
+            mandatory: False
+        - valid_max: 
+            allowed_types: 
+                - int8
+            mandatory: False
+        - add_offset: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - scale_factor: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - coverage_content_type:
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - auxiliaryInformation
+        - coordinates: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - "lon lat"
+                - "lat lon"
+        - time_offset: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: False
+        - source: 
+            allowed_types: 
+                - str
+            mandatory: False
+
   - aerosol_dynamic_indicator: 
       allowed_types:
         - int8
-      mandatory: True
+      mandatory: False
       attributes: 
         - long_name:
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
         - units: 
+            allowed_types: 
+                - str
+            mandatory: True
+            allowed_values:
+                - "1"
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+        - _FillValue: 
+            allowed_types: 
+                - int8
+            mandatory: True
+            allowed_values: 
+                - -128
+        - valid_range: 
+            allowed_types: 
+                - int8
+            mandatory: False
+        - add_offset: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - scale_factor: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - coverage_content_type:
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - auxiliaryInformation
+        - coordinates: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - "lon lat"
+                - "lat lon"
+        - time_offset: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: False
+        - source: 
             allowed_types: 
                 - str
             mandatory: False
@@ -292,6 +403,7 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
   - sst_dtime: 
       allowed_types: 
         - int16
@@ -314,7 +426,6 @@ variables:
   - wind_speed_dtime_from_sst:
       allowed_types:
         - int8
-      mandatory: True
       attributes: 
         - long_name:
             allowed_types: 
@@ -324,6 +435,26 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+
+  - source_of_wind_speed:
+      allowed_types:
+        - int8
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+        - flag_meanings: 
+            allowed_types: 
+                - str
+            mandatory: True
+        - flag_values: 
+            allowed_types: 
+                - list
+            mandatory: True
         - comment: 
             allowed_types: 
                 - str
