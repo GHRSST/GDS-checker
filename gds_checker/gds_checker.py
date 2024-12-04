@@ -25,7 +25,7 @@ logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
 
-def is_iso8601_date(string: str) -> bool:
+def is_iso8601_date(attr: str, string: str) -> bool:
     """
     Validate if the given string matches ISO 8601 format.
 
@@ -35,10 +35,10 @@ def is_iso8601_date(string: str) -> bool:
         bool: True if the string matches the ISO 8601 format, False otherwise.
     """
     try:
-        datetime.fromisoformat(string)
+        datetime.fromisoformat(string.replace('Z', '+00:00'))
         return True
-    except ValueError:
-        logger.error(f'date with value {string} is not ISO 8601 compliant')
+    except ValueError as e:
+        logger.error(f'date with value {string} in attribute {attr} is not ISO 8601 compliant')
         return False
 
 
@@ -165,7 +165,7 @@ def check_global_attributes(ds: xr.Dataset, config: dict) -> None:
         for expected_type in expected_types:
             if expected_type == "date":
                 if (actual_type == np.dtype(str)) and (
-                    is_iso8601_date(ds.attrs[global_attribute_name])
+                    is_iso8601_date(global_attribute_name, ds.attrs[global_attribute_name])
                 ):
                     i = i + 1
                     break
