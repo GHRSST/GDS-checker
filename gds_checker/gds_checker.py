@@ -1,17 +1,16 @@
 """Python software aiming to check that GHRSST products have a standard format,
 specified by the GHRSST Data Specification."""
 
-import sys
-import re
-import os
-import logging
 import argparse
-import yaml
-import xarray as xr
-import numpy as np
-
+import logging
+import os
+import re
+import sys
 from datetime import datetime
 
+import numpy as np
+import xarray as xr
+import yaml
 
 PROGRAM_VERSION = "0.1.0"
 
@@ -35,10 +34,12 @@ def is_iso8601_date(attr: str, string: str) -> bool:
         bool: True if the string matches the ISO 8601 format, False otherwise.
     """
     try:
-        datetime.fromisoformat(string.replace('Z', '+00:00'))
+        datetime.fromisoformat(string.replace("Z", "+00:00"))
         return True
-    except ValueError as e:
-        logger.error(f'date with value {string} in attribute {attr} is not ISO 8601 compliant')
+    except ValueError:
+        logger.error(
+            "Date with value %s in attribute %s is not ISO 8601 compliant", string, attr
+        )
         return False
 
 
@@ -103,10 +104,9 @@ def check_file_name(file_name: str, pattern: str) -> re.Match | None:
         )
         print(" ")
         return None
-    else:
-        logger.info("    File name is ok.")
-        print(" ")
-        return match
+    logger.info("    File name is ok.")
+    print(" ")
+    return match
 
 
 def check_global_attributes(ds: xr.Dataset, config: dict) -> None:
@@ -138,8 +138,9 @@ def check_global_attributes(ds: xr.Dataset, config: dict) -> None:
                     )
                     count = count + 1
                 else:
-                    logger.warning(
-                        "    Global attribute: '%s' missing.", global_attribute_name
+                    logger.info(
+                        "    Global attribute: '%s' missing, but is optional.",
+                        global_attribute_name,
                     )
                     count = count + 1
             else:
@@ -165,7 +166,9 @@ def check_global_attributes(ds: xr.Dataset, config: dict) -> None:
         for expected_type in expected_types:
             if expected_type == "date":
                 if (actual_type == np.dtype(str)) and (
-                    is_iso8601_date(global_attribute_name, ds.attrs[global_attribute_name])
+                    is_iso8601_date(
+                        global_attribute_name, ds.attrs[global_attribute_name]
+                    )
                 ):
                     i = i + 1
                     break
@@ -207,7 +210,6 @@ def check_global_attributes(ds: xr.Dataset, config: dict) -> None:
         print(" ")
     else:
         print(" ")
-    return
 
 
 def check_variables(ds: xr.Dataset, config: dict) -> None:
@@ -231,13 +233,27 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                     logger.error("    Variable: '%s' missing.", variable_name)
                     count = count + 1
                 else:
-                    logger.warning("    Variable: '%s' missing.", variable_name)
+                    logger.info(
+                        "    Variable: '%s' missing, but is optional.", variable_name
+                    )
                     count = count + 1
                 continue
-            else:
-                logger.error("    Variable: '%s' missing.", variable_name)
-                count = count + 1
-                continue
+            logger.error("    Variable: '%s' missing.", variable_name)
+            count = count + 1
+            continue
+        if "unless_defined" in variable[variable_name]:
+            unless_defined = variable[variable_name]["unless_defined"]
+            target_var_name, target_attr = unless_defined.split(":")
+            if target_var_name in ds.variables:
+                if target_attr in ds[target_var_name].attrs:
+                    logger.error(
+                        "    Variable attribute: '%s' for the variable: '%s' is in conflict with the 'unless_defined' of variable: '%s'.",
+                        target_attr,
+                        target_var_name,
+                        variable_name,
+                    )
+                    count = count + 1
+                    continue
         variable_data_array = ds[variable_name]
         actual_type = variable_data_array.dtype
         i = 0
@@ -264,17 +280,29 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                             variable_name,
                         )
                         count = count + 1
-                    else:
-                        logger.warning(
-                            "    Variable attribute: '%s' missing for the variable: '%s'.",
-                            attribute_name,
-                            variable_name,
-                        )
-                        count = count + 1
-                    continue
-                else:
-                    logger.error(
+                        continue
+
+                    logger.warning(
                         "    Variable attribute: '%s' missing for the variable: '%s'.",
+                        attribute_name,
+                        variable_name,
+                    )
+                    count = count + 1
+                    continue
+
+                logger.error(
+                    "    Variable attribute: '%s' missing for the variable: '%s'.",
+                    attribute_name,
+                    variable_name,
+                )
+                count = count + 1
+                continue
+            if "unless_defined" in attribute[attribute_name]:
+                target_var_name = attribute[attribute_name]["unless_defined"]
+                if target_var_name in ds.variables:
+                    logger.error(
+                        "    Variable: '%s' is in conflict with the 'unless_defined' of the attribute '%s' of variable: '%s'.",
+                        target_var_name,
                         attribute_name,
                         variable_name,
                     )
@@ -284,13 +312,19 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
             if "allowed_types" not in attribute[attribute_name]:
                 raise ValueError(
                     f'missing "allowed_types" definition for attribute '
-                    f'{attribute_name} in YAML profile')
+                    f"{attribute_name} in YAML profile"
+                )
             expected_types = attribute[attribute_name]["allowed_types"]
             i = 0
             for expected_type in expected_types:
-                if actual_type == np.dtype(expected_type):
-                    i = i + 1
-                    break
+                if expected_type == "np.ndarray":
+                    if actual_type == np.ndarray:
+                        i = i + 1
+                        break
+                else:
+                    if actual_type == np.dtype(expected_type):
+                        i = i + 1
+                        break
             if i < 1:
                 logger.error(
                     "    Variable attribute: '%s' for the variable: '%s' has type: %s, allowed types: %s.",
@@ -316,12 +350,40 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                         allowed_values,
                     )
                     count = count + 1
+            if attribute_name == "flag_meanings":
+                flag_meanings_list = variable_data_array.attrs["flag_meanings"].split()
+                if "flag_masks" not in variable_data_array.attrs:
+                    logger.error(
+                        "    Variable attribute: 'flag_masks' missing for the variable: '%s' when 'flag_meanings' flag is specified.",
+                        variable_name,
+                    )
+                else:
+                    if len(flag_meanings_list) != len(
+                        variable_data_array.attrs["flag_masks"]
+                    ):
+                        logger.error(
+                            "    Mismatch: 'flag_meanings' length does not match 'flag_masks' length for the variable: %s.",
+                            variable_name,
+                        )
+                if "flag_values" not in variable_data_array.attrs:
+                    logger.error(
+                        "    Variable attribute: 'flag_values' missing for the variable: '%s' when 'flag_meanings' flag is specified.",
+                        variable_name,
+                    )
+                else:
+                    if len(flag_meanings_list) != len(
+                        variable_data_array.attrs["flag_values"]
+                    ):
+                        logger.error(
+                            "    Mismatch: 'flag_meanings' length does not match 'flag_values' length for the variable: %s.",
+                            variable_name,
+                        )
+
     if count == 0:
         logger.info("    Variables are ok.")
         print(" ")
     else:
         print(" ")
-    return
 
 
 def check_undefined_lon_lat_time(ds: xr.Dataset) -> None:
@@ -367,7 +429,6 @@ def check_undefined_lon_lat_time(ds: xr.Dataset) -> None:
         print(" ")
     else:
         print(" ")
-    return
 
 
 def check_lon_boundaries(ds: xr.Dataset, config: dict) -> None:
@@ -402,7 +463,6 @@ def check_lon_boundaries(ds: xr.Dataset, config: dict) -> None:
         print(" ")
     else:
         print(" ")
-    return
 
 
 def main():

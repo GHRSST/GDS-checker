@@ -31,3 +31,15 @@ gds_checker = "gds_checker.gds_checker:main"
 
 [tool.setuptools.package-data]
 "gds_checker" = ["*.yml"]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "setuptools",
+    "types-setuptools",
+    "black",
+    "isort",
+    "flake8",
+    "pylint",
+    "mypy"
+]

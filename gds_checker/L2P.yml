@@ -212,7 +212,7 @@ variables:
             mandatory: True
         - flag_masks: 
             allowed_types: 
-                - int16
+                - np.ndarray
             mandatory: True
         - coverage_content_type:
             allowed_types: 
@@ -598,7 +598,7 @@ variables:
             mandatory: True
         - flag_values: 
             allowed_types: 
-                - list
+                - np.ndarray
             mandatory: True
         - comment: 
             allowed_types: 

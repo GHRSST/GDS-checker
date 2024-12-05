@@ -1,0 +1,37 @@
+repos:
+- repo: local
+  hooks:
+  - id: isort
+    name: Isort
+    stages: [pre-commit]
+    language: system
+    entry: isort
+    types: [python]
+
+  - id: black
+    name: Black
+    stages: [pre-commit]
+    language: system
+    entry: black
+    types: [python]
+
+  - id: flake8
+    name: Flake8
+    stages: [pre-commit]
+    language: system
+    entry: flake8
+    types: [python]
+
+  - id: pylint
+    name: PyLint
+    stages: [pre-commit]
+    language: system
+    entry: pylint --rcfile=.pylintrc
+    files: \.py$
+
+  - id: mypy
+    name: mypy
+    stages: [ pre-commit ]
+    language: system
+    entry: mypy
+    files: \.py$
