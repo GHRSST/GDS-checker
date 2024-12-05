@@ -288,9 +288,14 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
             expected_types = attribute[attribute_name]["allowed_types"]
             i = 0
             for expected_type in expected_types:
-                if actual_type == np.dtype(expected_type):
-                    i = i + 1
-                    break
+                if expected_type == "np.ndarray":
+                    if actual_type == np.ndarray:
+                        i = i + 1
+                        break
+                else:
+                    if actual_type == np.dtype(expected_type):
+                        i = i + 1
+                        break
             if i < 1:
                 logger.error(
                     "    Variable attribute: '%s' for the variable: '%s' has type: %s, allowed types: %s.",
