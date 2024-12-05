@@ -241,6 +241,19 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
             logger.error("    Variable: '%s' missing.", variable_name)
             count = count + 1
             continue
+        if "unless_defined" in variable[variable_name]:
+            unless_defined = variable[variable_name]["unless_defined"]
+            target_var_name, target_attr = unless_defined.split(":")
+            if target_var_name in ds.variables:
+                if target_attr in ds[target_var_name].attrs:
+                    logger.error(
+                        "    Variable attribute: '%s' for the variable: '%s' is in conflict with the 'unless_defined' of variable: '%s'.",
+                        target_attr,
+                        target_var_name,
+                        variable_name,
+                    )
+                    count = count + 1
+                    continue
         variable_data_array = ds[variable_name]
         actual_type = variable_data_array.dtype
         i = 0
@@ -284,6 +297,17 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                 )
                 count = count + 1
                 continue
+            if "unless_defined" in attribute[attribute_name]:
+                target_var_name = attribute[attribute_name]["unless_defined"]
+                if target_var_name in ds.variables:
+                    logger.error(
+                        "    Variable: '%s' is in conflict with the 'unless_defined' of the attribute '%s' of variable: '%s'.",
+                        target_var_name,
+                        attribute_name,
+                        variable_name,
+                    )
+                    count = count + 1
+                    continue
             actual_type = type(variable_data_array.attrs[attribute_name])
             if "allowed_types" not in attribute[attribute_name]:
                 raise ValueError(
