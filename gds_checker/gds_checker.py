@@ -253,7 +253,6 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                         variable_name,
                     )
                     count = count + 1
-                    continue
         variable_data_array = ds[variable_name]
         actual_type = variable_data_array.dtype
         i = 0
@@ -282,8 +281,8 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                         count = count + 1
                         continue
 
-                    logger.warning(
-                        "    Variable attribute: '%s' missing for the variable: '%s'.",
+                    logger.info(
+                        "    Variable attribute: '%s' missing for the variable: '%s', but is optional.",
                         attribute_name,
                         variable_name,
                     )
@@ -307,33 +306,28 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                         variable_name,
                     )
                     count = count + 1
-                    continue
             actual_type = type(variable_data_array.attrs[attribute_name])
-            if "allowed_types" not in attribute[attribute_name]:
-                raise ValueError(
-                    f'missing "allowed_types" definition for attribute '
-                    f"{attribute_name} in YAML profile"
-                )
-            expected_types = attribute[attribute_name]["allowed_types"]
-            i = 0
-            for expected_type in expected_types:
-                if expected_type == "np.ndarray":
-                    if actual_type == np.ndarray:
-                        i = i + 1
-                        break
-                else:
-                    if actual_type == np.dtype(expected_type):
-                        i = i + 1
-                        break
-            if i < 1:
-                logger.error(
-                    "    Variable attribute: '%s' for the variable: '%s' has type: %s, allowed types: %s.",
-                    attribute_name,
-                    variable_name,
-                    actual_type,
-                    expected_types,
-                )
-                count = count + 1
+            if "allowed_types" in attribute[attribute_name]:
+                expected_types = attribute[attribute_name]["allowed_types"]
+                i = 0
+                for expected_type in expected_types:
+                    if expected_type == "np.ndarray":
+                        if actual_type == np.ndarray:
+                            i = i + 1
+                            break
+                    else:
+                        if actual_type == np.dtype(expected_type):
+                            i = i + 1
+                            break
+                if i < 1:
+                    logger.error(
+                        "    Variable attribute: '%s' for the variable: '%s' has type: %s, allowed types: %s.",
+                        attribute_name,
+                        variable_name,
+                        actual_type,
+                        expected_types,
+                    )
+                    count = count + 1
             if "allowed_values" in attribute[attribute_name]:
                 allowed_values = attribute[attribute_name]["allowed_values"]
                 i = 0
@@ -370,7 +364,6 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                             variable_name,
                         )
                     count = count + 1
-                    continue
                 if "flag_values" in variable_data_array.attrs:
                     if len(flag_meanings_list) != len(
                         variable_data_array.attrs["flag_values"]
@@ -380,7 +373,6 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                             variable_name,
                         )
                     count = count + 1
-                    continue
 
     if count == 0:
         logger.info("    Variables are ok.")
