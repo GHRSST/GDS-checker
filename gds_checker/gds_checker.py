@@ -352,12 +352,16 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                     count = count + 1
             if attribute_name == "flag_meanings":
                 flag_meanings_list = variable_data_array.attrs["flag_meanings"].split()
-                if "flag_masks" not in variable_data_array.attrs:
+                if ("flag_masks" not in variable_data_array.attrs) and (
+                    "flag_values" not in variable_data_array.attrs
+                ):
                     logger.error(
-                        "    Variable attribute: 'flag_masks' missing for the variable: '%s' when 'flag_meanings' flag is specified.",
+                        "    Variable attribute: 'flag_masks' or 'flag_values' are missing for the variable: '%s' when 'flag_meanings' flag is specified.",
                         variable_name,
                     )
-                else:
+                    count = count + 1
+                    continue
+                if "flag_masks" in variable_data_array.attrs:
                     if len(flag_meanings_list) != len(
                         variable_data_array.attrs["flag_masks"]
                     ):
@@ -365,12 +369,9 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                             "    Mismatch: 'flag_meanings' length does not match 'flag_masks' length for the variable: %s.",
                             variable_name,
                         )
-                if "flag_values" not in variable_data_array.attrs:
-                    logger.error(
-                        "    Variable attribute: 'flag_values' missing for the variable: '%s' when 'flag_meanings' flag is specified.",
-                        variable_name,
-                    )
-                else:
+                    count = count + 1
+                    continue
+                if "flag_values" in variable_data_array.attrs:
                     if len(flag_meanings_list) != len(
                         variable_data_array.attrs["flag_values"]
                     ):
@@ -378,6 +379,8 @@ def check_variables(ds: xr.Dataset, config: dict) -> None:
                             "    Mismatch: 'flag_meanings' length does not match 'flag_values' length for the variable: %s.",
                             variable_name,
                         )
+                    count = count + 1
+                    continue
 
     if count == 0:
         logger.info("    Variables are ok.")
