@@ -247,7 +247,7 @@ variables:
             mandatory: True
         - flag_values: 
             allowed_types: 
-                - int16
+                - np.ndarray
             mandatory: True
         - coverage_content_type:
             allowed_types: 
@@ -482,7 +482,7 @@ variables:
                 - -128
         - valid_range: 
             allowed_types: 
-                - list
+                - np.ndarray
             mandatory: False
         - add_offset: 
             allowed_types: 
@@ -522,7 +522,7 @@ variables:
             mandatory: True
         - flag_values: 
             allowed_types: 
-                - list
+                - np.ndarray
             mandatory: True
         - comment: 
             allowed_types: 
@@ -530,7 +530,7 @@ variables:
             mandatory: False
         - valid_range: 
             allowed_types: 
-                - list
+                - np.ndarray
             mandatory: False
         - coverage_content_type:
             allowed_types: 
@@ -560,7 +560,7 @@ variables:
             mandatory: True
         - flag_values: 
             allowed_types: 
-                - list
+                - np.ndarray
             mandatory: True
         - comment: 
             allowed_types: 
@@ -568,7 +568,7 @@ variables:
             mandatory: False
         - valid_range: 
             allowed_types: 
-                - list
+                - np.ndarray
             mandatory: False
         - coverage_content_type:
             allowed_types: 
@@ -606,7 +606,7 @@ variables:
             mandatory: False
         - valid_range: 
             allowed_types: 
-                - list
+                - np.ndarray
             mandatory: False
         - coverage_content_type:
             allowed_types: 
@@ -636,7 +636,7 @@ variables:
             mandatory: True
         - flag_values: 
             allowed_types: 
-                - list
+                - np.ndarray
             mandatory: True
         - comment: 
             allowed_types: 
@@ -644,7 +644,7 @@ variables:
             mandatory: False
         - valid_range: 
             allowed_types: 
-                - list
+                - np.ndarray
             mandatory: False
         - coverage_content_type:
             allowed_types: 
@@ -695,7 +695,7 @@ variables:
                 - -128
         - valid_range: 
             allowed_types: 
-                - list
+                - np.ndarray
             mandatory: False
         - add_offset: 
             allowed_types: 
