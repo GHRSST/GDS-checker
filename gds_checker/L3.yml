@@ -21,57 +21,7 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
-  - sses_bias: 
-      allowed_types:
-        - int8
-      mandatory: True
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: False
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - kelvin
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-  - sses_standard_deviation: 
-      allowed_types:
-        - int8
-      mandatory: True
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: False
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - kelvin
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-  - quality_level: 
-      allowed_types:
-        - int8
-      mandatory: True
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: False
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            
   - sst_dtime: 
       allowed_types: 
         - int16
@@ -91,3 +41,109 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
+  - sses_bias: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+
+  - sses_standard_deviation: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - kelvin
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+
+  - dt_analysis: 
+
+  - wind_speed: 
+
+  - wind_speed_dtime_from_sst: 
+
+  - source_of_wind_speed: 
+
+  - sea_ice_fraction: 
+
+  - sea_ice_fraction_dtime_from_sst: 
+
+  - source_of_sea_ice_fraction: 
+
+  - aerosol_dynamic_indicator: 
+
+  - adi_dtime_from_sst: 
+
+  - source_of_adi: 
+
+  - l2p_flags: 
+
+  - quality_level: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: False
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+
+  - satellite_zenith_angle: 
+
+  - solar_zenith_angle: 
+
+  - surface_solar_irradiance: 
+
+  - ssi_dtime_from_sst: 
+
+  - source_of_ssi: 
+
+  - or_latitude: 
+
+  - or_longitude: 
+
+  - or_number_of_pixels: 
+
+  - sum_sst: 
+
+  - sum_square_sst: 
+
+  - adjusted_sea_surface_temperature: 
+
+  - adjusted_standard_deviation_error: 
+
+  - bias_to_reference_sst: 
+
+  - standard_deviation_to_reference_sst: 
+
+  - source_of_sst: 
