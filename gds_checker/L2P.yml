@@ -21,7 +21,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: True
+            mandatory: False
             allowed_values: 
                 - K
         - coverage_content_type:
@@ -88,7 +88,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: True
+            mandatory: False
             allowed_values: 
                 - K
         - comment: 
@@ -322,7 +322,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: True
+            mandatory: False
             allowed_values:
                 - "1"
         - comment: 
@@ -404,7 +404,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: True
+            mandatory: False
             allowed_values:
                 - "1"
         - comment: 
@@ -720,7 +720,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: True
+            mandatory: False
             allowed_values:
                 - "angular_degree"
         - comment: 
@@ -774,7 +774,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: True
+            mandatory: False
             allowed_values:
                 - "degree"
 
@@ -790,7 +790,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: True
+            mandatory: False
             allowed_values: 
                 - m s-2
 
