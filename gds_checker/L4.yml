@@ -10,13 +10,13 @@ variables:
         - long_name:
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
         - units: 
             allowed_types: 
                 - str
             mandatory: False
             allowed_values: 
-                - kelvin
+                - K
         - comment: 
             allowed_types: 
                 - str
@@ -30,13 +30,13 @@ variables:
         - long_name:
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
         - units: 
             allowed_types: 
                 - str
             mandatory: False
             allowed_values: 
-                - kelvin
+                - K
         - comment: 
             allowed_types: 
                 - str
@@ -50,7 +50,27 @@ variables:
         - long_name:
             allowed_types: 
                 - str
+            mandatory: True
+        - units: 
+            allowed_types: 
+                - str
             mandatory: False
+            allowed_values: 
+                - '1'
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+
+  - sea_ice_fraction_error: 
+      allowed_types:
+        - int8
+      mandatory: True
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: True
         - units: 
             allowed_types: 
                 - str
@@ -70,11 +90,9 @@ variables:
         - long_name:
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
         - comment: 
             allowed_types: 
                 - str
             mandatory: False
             
-  - sea_ice_fraction_error: 
-  
