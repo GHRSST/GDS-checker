@@ -300,6 +300,7 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
   - sea_ice_fraction: 
       allowed_types:
         - int8
@@ -372,6 +373,8 @@ variables:
                 - str
             mandatory: False
 
+  - sea_ice_fraction_dtime_from_sst: 
+
   - aerosol_dynamic_indicator: 
       allowed_types:
         - int8
@@ -433,6 +436,9 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
+
+  - adi_dtime_from_sst:
 
 
   - sst_dtime: 
@@ -720,4 +726,12 @@ variables:
             allowed_values: 
                 - "lon lat"
                 - "lat lon"
+
+  - solar_zenith_angle: 
+
+  - surface_solar_irradiance: 
+
+  - ssi_dtime_from_sst: 
+
+  - other fields: 
 
