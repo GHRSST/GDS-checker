@@ -262,9 +262,11 @@ variables:
             allowed_values: 
                 - "lon lat"
                 - "lat lon"
+
   - dt_analysis: 
       allowed_types:
         - int8
+        - int16
       mandatory: True
       attributes: 
         - long_name:
@@ -281,6 +283,7 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
   - wind_speed: 
       allowed_types:
         - int8
@@ -289,7 +292,7 @@ variables:
         - long_name:
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
         - units: 
             allowed_types: 
                 - str
@@ -373,7 +376,21 @@ variables:
                 - str
             mandatory: False
 
-  - sea_ice_fraction_dtime_from_sst: 
+  - sea_ice_fraction_dtime_from_sst:  
+      allowed_types: 
+        - int8
+      mandatory: False
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: True
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values:
+                - h
 
   - aerosol_dynamic_indicator: 
       allowed_types:
@@ -439,6 +456,20 @@ variables:
 
 
   - adi_dtime_from_sst:
+      allowed_types: 
+        - int8
+      mandatory: False
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: True
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values:
+                - h
 
 
   - sst_dtime: 
@@ -449,7 +480,7 @@ variables:
         - long_name:
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
         - units: 
             allowed_types: 
                 - str
@@ -522,6 +553,7 @@ variables:
         - long_name:
             allowed_types: 
                 - str
+            mandatory: True
         - flag_meanings: 
             allowed_types: 
                 - str
@@ -560,6 +592,7 @@ variables:
         - long_name:
             allowed_types: 
                 - str
+            mandatory: True
         - flag_meanings: 
             allowed_types: 
                 - str
@@ -598,6 +631,7 @@ variables:
         - long_name:
             allowed_types: 
                 - str
+            mandatory: True
         - flag_meanings: 
             allowed_types: 
                 - str
@@ -636,6 +670,7 @@ variables:
         - long_name:
             allowed_types: 
                 - str
+            mandatory: True
         - flag_meanings: 
             allowed_types: 
                 - str
@@ -728,10 +763,49 @@ variables:
                 - "lat lon"
 
   - solar_zenith_angle: 
+      allowed_types:
+        - int8
+      mandatory: False
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: True
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: True
+            allowed_values:
+                - "degree"
 
   - surface_solar_irradiance: 
+      allowed_types:
+        - int8
+      mandatory: False
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: True
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: True
+            allowed_values: 
+                - m s-2
 
   - ssi_dtime_from_sst: 
-
-  - other fields: 
-
+      allowed_types:
+        - int8
+      mandatory: False
+      attributes: 
+        - long_name:
+            allowed_types: 
+                - str
+            mandatory: True
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values:
+                - h
