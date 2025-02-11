@@ -348,6 +348,12 @@ variables:
             allowed_types: 
                 - str
             mandatory: True
+        - units: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - '1'
 
   - sum_sst: 
       mandatory: False
