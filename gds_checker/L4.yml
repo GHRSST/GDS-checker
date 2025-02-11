@@ -21,6 +21,7 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
   - analysis_error: 
       allowed_types:
         - int16
@@ -40,6 +41,7 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
   - sea_ice_fraction: 
       allowed_types:
         - int8
@@ -59,6 +61,7 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+
   - mask: 
       allowed_types:
         - int8
@@ -72,3 +75,6 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
+            
+  - sea_ice_fraction_error: 
+  
