@@ -253,6 +253,19 @@ variables:
             mandatory: true
             allowed_values:
               - m s-1
+        - height:
+            allowed_types:
+              - str
+            mandatory: false
+        - source:
+            allowed_types:
+              - str
+            mandatory: false
+        - time_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: false
         - _FillValue:
             allowed_types:
               - int8
@@ -761,6 +774,15 @@ variables:
             mandatory: true
             allowed_values:
               - m s-2
+        - source:
+            allowed_types:
+              - str
+            mandatory: false
+        - time_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: false
         - comment:
             allowed_types:
               - str
