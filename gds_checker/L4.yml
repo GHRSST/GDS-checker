@@ -14,9 +14,15 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K
+        - _FillValue: 
+            allowed_types: 
+                - int16
+            mandatory: True
+            allowed_values: 
+                - -32768
         - comment: 
             allowed_types: 
                 - str
@@ -34,9 +40,15 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K
+        - _FillValue: 
+            allowed_types: 
+                - int16
+            mandatory: True
+            allowed_values: 
+                - -32768
         - comment: 
             allowed_types: 
                 - str
@@ -51,13 +63,65 @@ variables:
             allowed_types: 
                 - str
             mandatory: True
+        - standard_name:
+            allowed_types: 
+                - str
+            mandatory: True
+            allowed_values: 
+                - sea_ice_area_fraction
         - units: 
+            allowed_types: 
+                - str
+            mandatory: True
+            allowed_values:
+                - "1"
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
+        - _FillValue: 
+            allowed_types: 
+                - int8
+            mandatory: True
+            allowed_values: 
+                - -128
+        - valid_min: 
+            allowed_types: 
+                - int8
+            mandatory: False
+        - valid_max: 
+            allowed_types: 
+                - int8
+            mandatory: False
+        - add_offset: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - scale_factor: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: True
+        - coverage_content_type:
             allowed_types: 
                 - str
             mandatory: False
             allowed_values: 
-                - '1'
-        - comment: 
+                - auxiliaryInformation
+        - coordinates: 
+            allowed_types: 
+                - str
+            mandatory: False
+            allowed_values: 
+                - "lon lat"
+                - "lat lon"
+        - time_offset: 
+            allowed_types: 
+                - float32
+                - float64
+            mandatory: False
+        - source: 
             allowed_types: 
                 - str
             mandatory: False
@@ -74,9 +138,15 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - '1'
+        - _FillValue: 
+            allowed_types: 
+                - int8
+            mandatory: True
+            allowed_values: 
+                - -128
         - comment: 
             allowed_types: 
                 - str
