@@ -152,7 +152,6 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
-
         - _FillValue: 
             allowed_types: 
                 - int8
@@ -277,7 +276,15 @@ variables:
                 - str
             mandatory: False
             allowed_values: 
-                - kelvin
+                - K        
+        - _FillValue: 
+            allowed_types: 
+                - int8
+                - int16
+            mandatory: False
+            allowed_values: 
+                - -128 
+                - -32768
         - comment: 
             allowed_types: 
                 - str
@@ -298,6 +305,12 @@ variables:
             mandatory: False
             allowed_values: 
                 - m s-1
+        - _FillValue: 
+            allowed_types: 
+                - int8
+            mandatory: False
+            allowed_values: 
+                - -128 
         - comment: 
             allowed_types: 
                 - str
@@ -390,6 +403,10 @@ variables:
             mandatory: False
             allowed_values:
                 - h
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
 
   - aerosol_dynamic_indicator: 
       allowed_types:
@@ -468,11 +485,11 @@ variables:
                 - str
             mandatory: False
             allowed_values:
+                - h
         - comment: 
             allowed_types: 
                 - str
             mandatory: False
-                - h
 
 
   - sst_dtime: 
@@ -489,7 +506,7 @@ variables:
                 - str
             mandatory: False
             allowed_values: 
-                - seconds
+                - s
         - comment: 
             allowed_types: 
                 - str
@@ -514,12 +531,6 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
-        - _FillValue: 
-            allowed_types: 
-                - int8
-            mandatory: True
-            allowed_values: 
-                - -128
         - valid_range: 
             allowed_types: 
                 - np.ndarray
@@ -730,13 +741,6 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
-        - _FillValue: 
-            allowed_types: 
-                - int8
-                - int16
-            mandatory: True
-            allowed_values: 
-                - -128
         - valid_range: 
             allowed_types: 
                 - np.ndarray
@@ -779,7 +783,7 @@ variables:
                 - str
             mandatory: False
             allowed_values:
-                - "degree"
+                - "angular_degree"
         - comment: 
             allowed_types: 
                 - str
@@ -799,7 +803,7 @@ variables:
                 - str
             mandatory: False
             allowed_values: 
-                - m s-2
+                - W m-2
         - comment: 
             allowed_types: 
                 - str
