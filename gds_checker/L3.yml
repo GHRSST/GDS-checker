@@ -21,7 +21,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K
         - coverage_content_type:
@@ -86,7 +86,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - s
         - comment: 
@@ -106,7 +106,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K
         - comment: 
@@ -163,7 +163,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K
         - comment: 
@@ -221,7 +221,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K        
         - _FillValue: 
@@ -249,7 +249,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - m s-1
         - _FillValue: 
@@ -275,7 +275,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values:
                 - h
         - comment: 
@@ -367,7 +367,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values:
                 - "1"
         - comment: 
@@ -433,7 +433,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values:
                 - h
         - comment: 
@@ -492,7 +492,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values:
                 - "1"
         - comment: 
@@ -554,7 +554,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values:
                 - h
         - comment: 
@@ -690,7 +690,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values:
                 - "angular_degree"
         - comment: 
@@ -737,7 +737,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values:
                 - "angular_degree"
         - comment: 
@@ -757,7 +757,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - m s-2
         - comment: 
@@ -777,7 +777,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values:
                 - h
         - comment: 
@@ -837,7 +837,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values:
                 - degree_north
         - comment: 
@@ -858,7 +858,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values:
                 - degree_east
         - comment: 
@@ -878,7 +878,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - '1'
         - comment: 
@@ -898,7 +898,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K
         - _FillValue: 
@@ -924,7 +924,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K2
         - _FillValue: 
@@ -950,7 +950,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K
         - _FillValue: 
@@ -976,7 +976,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K
         - _FillValue: 
@@ -1002,7 +1002,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K
         - _FillValue: 
@@ -1028,7 +1028,7 @@ variables:
         - units: 
             allowed_types: 
                 - str
-            mandatory: False
+            mandatory: True
             allowed_values: 
                 - K
         - _FillValue: 
