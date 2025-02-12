@@ -34,7 +34,6 @@ variables:
             allowed_types: 
                 - str
             mandatory: False
-
         - depth: 
             allowed_types: 
                 - str
@@ -469,6 +468,10 @@ variables:
                 - str
             mandatory: False
             allowed_values:
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
                 - h
 
 
@@ -777,6 +780,10 @@ variables:
             mandatory: False
             allowed_values:
                 - "degree"
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
 
   - surface_solar_irradiance: 
       allowed_types:
@@ -793,6 +800,10 @@ variables:
             mandatory: False
             allowed_values: 
                 - m s-2
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
 
   - ssi_dtime_from_sst: 
       allowed_types:
@@ -809,3 +820,7 @@ variables:
             mandatory: False
             allowed_values:
                 - h
+        - comment: 
+            allowed_types: 
+                - str
+            mandatory: False
