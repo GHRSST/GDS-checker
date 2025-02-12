@@ -2,1064 +2,1064 @@
 
 variables:
 
-  - sea_surface_temperature: 
+  - sea_surface_temperature:
       allowed_types:
         - int16
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
         - standard_name:
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - sea_surface_subskin_temperature
-                - sea_surface_skin_temperature
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - sea_surface_subskin_temperature
+              - sea_surface_skin_temperature
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - physicalMeasurement
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - depth: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - source: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
-        - _FillValue: 
-            allowed_types: 
-                - int16
-            mandatory: True
-            allowed_values: 
-                - -32768
-        - valid_min: 
-            allowed_types: 
-                - int16
-            mandatory: False
-        - valid_max: 
-            allowed_types: 
-                - int16
-            mandatory: False
-        - add_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
-        - scale_factor: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - physicalMeasurement
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - depth:
+            allowed_types:
+              - str
+            mandatory: false
+        - source:
+            allowed_types:
+              - str
+            mandatory: false
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
+        - _FillValue:
+            allowed_types:
+              - int16
+            mandatory: true
+            allowed_values:
+              - -32768
+        - valid_min:
+            allowed_types:
+              - int16
+            mandatory: false
+        - valid_max:
+            allowed_types:
+              - int16
+            mandatory: false
+        - add_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
+        - scale_factor:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
 
-  - sst_dtime: 
-      allowed_types: 
+  - sst_dtime:
+      allowed_types:
         - int16
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - s
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - s
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - sses_bias: 
+  - sses_bias:
       allowed_types:
         - int8
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - _FillValue: 
-            allowed_types: 
-                - int8
-            mandatory: True
-            allowed_values: 
-                - -128
-        - valid_min: 
-            allowed_types: 
-                - int8
-            mandatory: False
-        - valid_max: 
-            allowed_types: 
-                - int8
-            mandatory: False
-        - add_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
-        - scale_factor: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - _FillValue:
+            allowed_types:
+              - int8
+            mandatory: true
+            allowed_values:
+              - -128
+        - valid_min:
+            allowed_types:
+              - int8
+            mandatory: false
+        - valid_max:
+            allowed_types:
+              - int8
+            mandatory: false
+        - add_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
+        - scale_factor:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - qualityInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - qualityInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
 
-  - sses_standard_deviation: 
+  - sses_standard_deviation:
       allowed_types:
         - int8
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - _FillValue: 
-            allowed_types: 
-                - int8
-            mandatory: True
-            allowed_values: 
-                - -128
-        - valid_min: 
-            allowed_types: 
-                - int8
-            mandatory: False
-        - valid_max: 
-            allowed_types: 
-                - int8
-            mandatory: False
-        - add_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
-        - scale_factor: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - _FillValue:
+            allowed_types:
+              - int8
+            mandatory: true
+            allowed_values:
+              - -128
+        - valid_min:
+            allowed_types:
+              - int8
+            mandatory: false
+        - valid_max:
+            allowed_types:
+              - int8
+            mandatory: false
+        - add_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
+        - scale_factor:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - qualityInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - qualityInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
 
-  - dt_analysis: 
+  - dt_analysis:
       allowed_types:
         - int8
         - int16
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K        
-        - _FillValue: 
-            allowed_types: 
-                - int8
-                - int16
-            mandatory: False
-            allowed_values: 
-                - -128 
-                - -32768
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K
+        - _FillValue:
+            allowed_types:
+              - int8
+              - int16
+            mandatory: false
+            allowed_values:
+              - -128
+              - -32768
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - wind_speed: 
+  - wind_speed:
       allowed_types:
         - int8
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - m s-1
-        - _FillValue: 
-            allowed_types: 
-                - int8
-            mandatory: False
-            allowed_values: 
-                - -128 
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - m s-1
+        - _FillValue:
+            allowed_types:
+              - int8
+            mandatory: false
+            allowed_values:
+              - -128
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
   - wind_speed_dtime_from_sst:
-      mandatory: False
+      mandatory: false
       allowed_types:
         - int8
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
             allowed_values:
-                - h
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - valid_range: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: False
-        - add_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
-        - scale_factor: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
+              - h
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - valid_range:
+            allowed_types:
+              - np.ndarray
+            mandatory: false
+        - add_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
+        - scale_factor:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - auxiliaryInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - auxiliaryInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
 
   - source_of_wind_speed:
-      mandatory: False
+      mandatory: false
       allowed_types:
         - int8
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_meanings: 
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_values: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: True
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - valid_range: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_meanings:
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_values:
+            allowed_types:
+              - np.ndarray
+            mandatory: true
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - valid_range:
+            allowed_types:
+              - np.ndarray
+            mandatory: false
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - auxiliaryInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - auxiliaryInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
 
-  - sea_ice_fraction: 
+  - sea_ice_fraction:
       allowed_types:
         - int8
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
         - standard_name:
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - sea_ice_area_fraction
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
             allowed_values:
-                - "1"
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - _FillValue: 
-            allowed_types: 
-                - int8
-            mandatory: True
-            allowed_values: 
-                - -128
-        - valid_min: 
-            allowed_types: 
-                - int8
-            mandatory: False
-        - valid_max: 
-            allowed_types: 
-                - int8
-            mandatory: False
-        - add_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
-        - scale_factor: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
+              - sea_ice_area_fraction
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - "1"
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - _FillValue:
+            allowed_types:
+              - int8
+            mandatory: true
+            allowed_values:
+              - -128
+        - valid_min:
+            allowed_types:
+              - int8
+            mandatory: false
+        - valid_max:
+            allowed_types:
+              - int8
+            mandatory: false
+        - add_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
+        - scale_factor:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - auxiliaryInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
-        - time_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: False
-        - source: 
-            allowed_types: 
-                - str
-            mandatory: False
-
-  - sea_ice_fraction_dtime_from_sst:  
-      allowed_types: 
-        - int8
-      mandatory: False
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: false
             allowed_values:
-                - h
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+              - auxiliaryInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
+        - time_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: false
+        - source:
+            allowed_types:
+              - str
+            mandatory: false
+
+  - sea_ice_fraction_dtime_from_sst:
+      allowed_types:
+        - int8
+      mandatory: false
+      attributes:
+        - long_name:
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - h
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
   - source_of_sea_ice_fraction:
-      mandatory: False
+      mandatory: false
       allowed_types:
         - int8
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_meanings: 
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_values: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: True
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - valid_range: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_meanings:
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_values:
+            allowed_types:
+              - np.ndarray
+            mandatory: true
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - valid_range:
+            allowed_types:
+              - np.ndarray
+            mandatory: false
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - auxiliaryInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
-
-  - aerosol_dynamic_indicator: 
-      allowed_types:
-        - int8
-      mandatory: False
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: false
             allowed_values:
-                - "1"
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - _FillValue: 
-            allowed_types: 
-                - int8
-            mandatory: True
-            allowed_values: 
-                - -128
-        - valid_range: 
-            allowed_types: 
-                - int8
-            mandatory: False
-        - add_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
-        - scale_factor: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
+              - auxiliaryInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
+
+  - aerosol_dynamic_indicator:
+      allowed_types:
+        - int8
+      mandatory: false
+      attributes:
+        - long_name:
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - "1"
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - _FillValue:
+            allowed_types:
+              - int8
+            mandatory: true
+            allowed_values:
+              - -128
+        - valid_range:
+            allowed_types:
+              - int8
+            mandatory: false
+        - add_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
+        - scale_factor:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - auxiliaryInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
-        - time_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: False
-        - source: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - auxiliaryInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
+        - time_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: false
+        - source:
+            allowed_types:
+              - str
+            mandatory: false
 
   - adi_dtime_from_sst:
-      allowed_types: 
+      allowed_types:
         - int8
-      mandatory: False
-      attributes: 
+      mandatory: false
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
             allowed_values:
-                - h
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+              - h
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
   - source_of_adi:
-      mandatory: False
+      mandatory: false
       allowed_types:
         - int8
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_meanings: 
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_values: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: True
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - valid_range: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_meanings:
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_values:
+            allowed_types:
+              - np.ndarray
+            mandatory: true
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - valid_range:
+            allowed_types:
+              - np.ndarray
+            mandatory: false
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - auxiliaryInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - auxiliaryInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
 
-  - l2p_flags: 
+  - l2p_flags:
       allowed_types:
         - int16
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - flag_meanings: 
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_masks: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - flag_meanings:
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_masks:
+            allowed_types:
+              - np.ndarray
+            mandatory: true
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - qualityInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - qualityInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
 
-  - quality_level: 
+  - quality_level:
       allowed_types:
         - int8
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - flag_meanings: 
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_values: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - flag_meanings:
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_values:
+            allowed_types:
+              - np.ndarray
+            mandatory: true
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - qualityInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - qualityInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
 
-  - satellite_zenith_angle: 
+  - satellite_zenith_angle:
       allowed_types:
         - int8
         - int16
-      mandatory: False
-      attributes: 
+      mandatory: false
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
         - standard_name:
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - sensor_zenith_angle
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
             allowed_values:
-                - "angular_degree"
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - valid_range: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: False
-        - add_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
-        - scale_factor: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
+              - sensor_zenith_angle
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - "angular_degree"
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - valid_range:
+            allowed_types:
+              - np.ndarray
+            mandatory: false
+        - add_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
+        - scale_factor:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - auxiliaryInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
-
-  - solar_zenith_angle: 
-      allowed_types:
-        - int8
-      mandatory: False
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: false
             allowed_values:
-                - "angular_degree"
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-
-  - surface_solar_irradiance: 
-      allowed_types:
-        - int8
-      mandatory: False
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - m s-2
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-
-  - ssi_dtime_from_sst: 
-      allowed_types:
-        - int8
-      mandatory: False
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+              - auxiliaryInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
             allowed_values:
-                - h
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+              - "lon lat"
+              - "lat lon"
+
+  - solar_zenith_angle:
+      allowed_types:
+        - int8
+      mandatory: false
+      attributes:
+        - long_name:
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - "angular_degree"
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+
+  - surface_solar_irradiance:
+      allowed_types:
+        - int8
+      mandatory: false
+      attributes:
+        - long_name:
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - m s-2
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+
+  - ssi_dtime_from_sst:
+      allowed_types:
+        - int8
+      mandatory: false
+      attributes:
+        - long_name:
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - h
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
   - source_of_ssi:
-      mandatory: False
+      mandatory: false
       allowed_types:
         - int8
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_meanings: 
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_values: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: True
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - valid_range: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_meanings:
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_values:
+            allowed_types:
+              - np.ndarray
+            mandatory: true
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - valid_range:
+            allowed_types:
+              - np.ndarray
+            mandatory: false
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - auxiliaryInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
-
-  - or_latitude: 
-      mandatory: False
-      allowed_types:
-        - int16
-        - float32
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: false
             allowed_values:
-                - degree_north
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-
-  - or_longitude: 
-      mandatory: False
-      allowed_types:
-        - int16
-        - float32
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+              - auxiliaryInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
             allowed_values:
-                - degree_east
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+              - "lon lat"
+              - "lat lon"
 
-  - or_number_of_pixels: 
-      mandatory: False
+  - or_latitude:
+      mandatory: false
       allowed_types:
         - int16
-      attributes: 
+        - float32
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - '1'
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - degree_north
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - sum_sst: 
-      mandatory: False
+  - or_longitude:
+      mandatory: false
+      allowed_types:
+        - int16
+        - float32
+      attributes:
+        - long_name:
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - degree_east
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+
+  - or_number_of_pixels:
+      mandatory: false
+      allowed_types:
+        - int16
+      attributes:
+        - long_name:
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - '1'
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+
+  - sum_sst:
+      mandatory: false
       allowed_types:
         - float32
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K
-        - _FillValue: 
-            allowed_types: 
-                - float32
-            mandatory: True
-            allowed_values: 
-                - 1e+20
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K
+        - _FillValue:
+            allowed_types:
+              - float32
+            mandatory: true
+            allowed_values:
+              - 1e+20
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - sum_square_sst: 
-      mandatory: False
+  - sum_square_sst:
+      mandatory: false
       allowed_types:
         - float32
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K2
-        - _FillValue: 
-            allowed_types: 
-                - float32
-            mandatory: True
-            allowed_values: 
-                - 1e+20
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K2
+        - _FillValue:
+            allowed_types:
+              - float32
+            mandatory: true
+            allowed_values:
+              - 1e+20
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - adjusted_sea_surface_temperature: 
-      mandatory: True
+  - adjusted_sea_surface_temperature:
+      mandatory: true
       allowed_types:
         - int16
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K
-        - _FillValue: 
-            allowed_types: 
-                - int16
-            mandatory: False
-            allowed_values: 
-                - -32768
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K
+        - _FillValue:
+            allowed_types:
+              - int16
+            mandatory: false
+            allowed_values:
+              - -32768
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - adjusted_standard_deviation_error: 
-      mandatory: True
+  - adjusted_standard_deviation_error:
+      mandatory: true
       allowed_types:
         - int8
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K
-        - _FillValue: 
-            allowed_types: 
-                - int8
-            mandatory: False
-            allowed_values: 
-                - -128
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K
+        - _FillValue:
+            allowed_types:
+              - int8
+            mandatory: false
+            allowed_values:
+              - -128
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - bias_to_reference_sst: 
-      mandatory: True
+  - bias_to_reference_sst:
+      mandatory: true
       allowed_types:
         - int16
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K
-        - _FillValue: 
-            allowed_types: 
-                - int16
-            mandatory: False
-            allowed_values: 
-                - -32768
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K
+        - _FillValue:
+            allowed_types:
+              - int16
+            mandatory: false
+            allowed_values:
+              - -32768
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - standard_deviation_to_reference_sst: 
-      mandatory: True
+  - standard_deviation_to_reference_sst:
+      mandatory: true
       allowed_types:
         - int8
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K
-        - _FillValue: 
-            allowed_types: 
-                - int8
-            mandatory: False
-            allowed_values: 
-                - -128
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K
+        - _FillValue:
+            allowed_types:
+              - int8
+            mandatory: false
+            allowed_values:
+              - -128
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - source_of_sst: 
-      mandatory: False
+  - source_of_sst:
+      mandatory: false
       allowed_types:
         - int8
-      attributes: 
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_meanings: 
-            allowed_types: 
-                - str
-            mandatory: True
-        - flag_values: 
-            allowed_types: 
-                - np.ndarray
-            mandatory: True
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_meanings:
+            allowed_types:
+              - str
+            mandatory: true
+        - flag_values:
+            allowed_types:
+              - np.ndarray
+            mandatory: true
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
