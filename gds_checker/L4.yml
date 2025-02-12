@@ -2,167 +2,166 @@
 
 variables:
 
-  - analysed_sst: 
+  - analysed_sst:
       allowed_types:
         - int16
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K
-        - _FillValue: 
-            allowed_types: 
-                - int16
-            mandatory: True
-            allowed_values: 
-                - -32768
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-
-  - analysis_error: 
-      allowed_types:
-        - int16
-      mandatory: True
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - K
-        - _FillValue: 
-            allowed_types: 
-                - int16
-            mandatory: True
-            allowed_values: 
-                - -32768
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-
-  - sea_ice_fraction: 
-      allowed_types:
-        - int8
-      mandatory: True
-      attributes: 
-        - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - standard_name:
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - sea_ice_area_fraction
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
             allowed_values:
-                - "1"
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-        - _FillValue: 
-            allowed_types: 
-                - int8
-            mandatory: True
-            allowed_values: 
-                - -128
-        - valid_min: 
-            allowed_types: 
-                - int8
-            mandatory: False
-        - valid_max: 
-            allowed_types: 
-                - int8
-            mandatory: False
-        - add_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
-        - scale_factor: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: True
+              - K
+        - _FillValue:
+            allowed_types:
+              - int16
+            mandatory: true
+            allowed_values:
+              - -32768
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+
+  - analysis_error:
+      allowed_types:
+        - int16
+      mandatory: true
+      attributes:
+        - long_name:
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - K
+        - _FillValue:
+            allowed_types:
+              - int16
+            mandatory: true
+            allowed_values:
+              - -32768
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+
+  - sea_ice_fraction:
+      allowed_types:
+        - int8
+      mandatory: true
+      attributes:
+        - long_name:
+            allowed_types:
+              - str
+            mandatory: true
+        - standard_name:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - sea_ice_area_fraction
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - "1"
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
+        - _FillValue:
+            allowed_types:
+              - int8
+            mandatory: true
+            allowed_values:
+              - -128
+        - valid_min:
+            allowed_types:
+              - int8
+            mandatory: false
+        - valid_max:
+            allowed_types:
+              - int8
+            mandatory: false
+        - add_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
+        - scale_factor:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: true
         - coverage_content_type:
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - auxiliaryInformation
-        - coordinates: 
-            allowed_types: 
-                - str
-            mandatory: False
-            allowed_values: 
-                - "lon lat"
-                - "lat lon"
-        - time_offset: 
-            allowed_types: 
-                - float32
-                - float64
-            mandatory: False
-        - source: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - auxiliaryInformation
+        - coordinates:
+            allowed_types:
+              - str
+            mandatory: false
+            allowed_values:
+              - "lon lat"
+              - "lat lon"
+        - time_offset:
+            allowed_types:
+              - float32
+              - float64
+            mandatory: false
+        - source:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - sea_ice_fraction_error: 
+  - sea_ice_fraction_error:
       allowed_types:
         - int8
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - units: 
-            allowed_types: 
-                - str
-            mandatory: True
-            allowed_values: 
-                - '1'
-        - _FillValue: 
-            allowed_types: 
-                - int8
-            mandatory: True
-            allowed_values: 
-                - -128
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
+            allowed_types:
+              - str
+            mandatory: true
+        - units:
+            allowed_types:
+              - str
+            mandatory: true
+            allowed_values:
+              - '1'
+        - _FillValue:
+            allowed_types:
+              - int8
+            mandatory: true
+            allowed_values:
+              - -128
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
 
-  - mask: 
+  - mask:
       allowed_types:
         - int8
-      mandatory: True
-      attributes: 
+      mandatory: true
+      attributes:
         - long_name:
-            allowed_types: 
-                - str
-            mandatory: True
-        - comment: 
-            allowed_types: 
-                - str
-            mandatory: False
-            
+            allowed_types:
+              - str
+            mandatory: true
+        - comment:
+            allowed_types:
+              - str
+            mandatory: false
