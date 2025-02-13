@@ -39,7 +39,9 @@ def is_iso8601_date(attr: str, string: str) -> bool:
         return True
     except ValueError:
         logger.error(
-            "Date with value %s in attribute '%s' is not ISO 8601 compliant", string, attr
+            "Date with value %s in attribute '%s' is not ISO 8601 compliant",
+            string,
+            attr,
         )
         return False
 
@@ -512,6 +514,8 @@ def main():
             if match is not None:
                 processing_level = match.group(4)
         if processing_level is not None:
+            if processing_level.startswith("L3"):
+                processing_level = "L3"
             processing_level_config_path = os.path.join(
                 script_dir, processing_level + ".yml"
             )
