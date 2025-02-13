@@ -39,7 +39,7 @@ def is_iso8601_date(attr: str, string: str) -> bool:
         return True
     except ValueError:
         logger.error(
-            "    Date with value %s in attribute '%s' is not ISO 8601 compliant",
+            "    Date with value %s in attribute '%s' is not ISO 8601 compliant.",
             string,
             attr,
         )
@@ -164,25 +164,32 @@ def check_global_attributes(ds: xr.Dataset, config: dict) -> None:
         actual_type = type(ds.attrs[global_attribute_name])
         expected_types = global_attribute[global_attribute_name]["allowed_types"]
         i = 0
+        date = False
+        url = False
         for expected_type in expected_types:
             if expected_type == "date":
-                if (actual_type == np.dtype(str)) and (
-                    is_iso8601_date(
-                        global_attribute_name, ds.attrs[global_attribute_name]
-                    )
-                ):
+                if actual_type == np.dtype(str):
                     i = i + 1
+                    date = True
                     break
             elif expected_type == "url":
-                if (actual_type == np.dtype(str)) and (
-                    is_url(ds.attrs[global_attribute_name])
-                ):
+                if actual_type == np.dtype(str):
                     i = i + 1
+                    url = True
                     break
             else:
                 if actual_type == np.dtype(expected_type):
                     i = i + 1
                     break
+        if date is True:
+            is_iso8601_date(global_attribute_name, ds.attrs[global_attribute_name])
+        if url is True:
+            if not is_url(ds.attrs[global_attribute_name]):
+                logger.error(
+                    "    Global attribute: '%s' has value: '%s', but is not a URL.",
+                    global_attribute_name,
+                    ds.attrs[global_attribute_name],
+                )
         if i < 1:
             logger.error(
                 "    Global attribute: '%s' has type: '%s', allowed types: '%s'.",
