@@ -39,7 +39,7 @@ def is_iso8601_date(attr: str, string: str) -> bool:
         return True
     except ValueError:
         logger.error(
-            "Date with value %s in attribute '%s' is not ISO 8601 compliant",
+            "    Date with value %s in attribute '%s' is not ISO 8601 compliant",
             string,
             attr,
         )
@@ -102,9 +102,7 @@ def check_file_name(file_name: str, pattern: str) -> Union[re.Match, None]:
     logger.info("-----------------------")
     match = re.match(pattern, file_name)
     if match is None:
-        logger.critical(
-            "    File name does not follow the naming convention. Can't check the variables."
-        )
+        logger.critical("    File name does not follow the naming convention.")
         print(" ")
         return None
     logger.info("    File name is ok.")
@@ -523,7 +521,7 @@ def main():
             check_variables(ds, processing_level_config)
         else:
             logger.error(
-                "    Processing level not found neither in file name nor as attribute. Can't check the variables"
+                "    Processing level not found neither in file name nor as attribute. Can't check the variables..."
             )
 
     with xr.open_dataset(file_path) as ds:
