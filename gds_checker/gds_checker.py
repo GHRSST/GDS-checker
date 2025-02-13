@@ -38,8 +38,8 @@ def is_iso8601_date(attr: str, string: str) -> bool:
         datetime.fromisoformat(string.replace("Z", "+00:00"))
         return True
     except ValueError:
-        logger.critical(
-            "Date with value %s in attribute %s is not ISO 8601 compliant", string, attr
+        logger.error(
+            "Date with value %s in attribute '%s' is not ISO 8601 compliant", string, attr
         )
         return False
 
