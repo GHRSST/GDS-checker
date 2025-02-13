@@ -7,6 +7,7 @@ import os
 import re
 import sys
 from datetime import datetime
+from typing import Union
 
 import numpy as np
 import xarray as xr
@@ -86,7 +87,7 @@ def construct_pattern(config: dict) -> str:
     return pattern
 
 
-def check_file_name(file_name: str, pattern: str) -> re.Match | None:
+def check_file_name(file_name: str, pattern: str) -> Union[re.Match, None]:
     """
     Function to check if the file name follows
     the pattern
