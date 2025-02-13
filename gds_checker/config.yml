@@ -45,7 +45,6 @@ file_naming_conventions:
 
   file_types:
     - nc
-    - xml
 
 
 global_attributes:
