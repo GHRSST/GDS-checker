@@ -17,6 +17,7 @@ setup(
     package_data={
         "gds_checker": ["*.yml"],
     },
+    python_requires='>=3.8',
     install_requires=["netcdf4", "pyyaml", "xarray"],
     classifiers=[
         "Programming Language :: Python",
